@@ -1,10 +1,10 @@
 @font-face {
   font-family: bobsBold;
-  src: url(../fonts/BobsBurgers.ttf);
+  src: url(./fonts/BobsBurgers.ttf);
 }
 @font-face {
   font-family: bobsLight;
-  src: url(../fonts/BobsBurgers2.ttf);
+  src: url(./fonts/BobsBurgers2.ttf);
 }
 
 * {
@@ -57,6 +57,10 @@ body {
 }
 #mainInfo {
   text-align: center;
+}
+#family_pic {
+  width: clamp(15rem, calc(1rem + 13vw), 30rem);
+  height: auto;
 }
 
 .info {

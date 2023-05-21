@@ -31,10 +31,13 @@ const pageLoad = () => {
 
   const mediumP1 = document.createElement("p");
   mediumP1.setAttribute("class", "medium-font");
+  mediumP1.setAttribute("id", "homeNav");
   const mediumP2 = document.createElement("p");
   mediumP2.setAttribute("class", "medium-font");
+  mediumP2.setAttribute("id", "menuNav");
   const mediumP3 = document.createElement("p");
   mediumP3.setAttribute("class", "medium-font");
+  mediumP3.setAttribute("id", "contactNav");
 
   mediumP1.innerHTML = "HOME";
   mediumP2.innerHTML = "MENU";
@@ -45,4 +48,20 @@ const pageLoad = () => {
   navBar.appendChild(mediumP3);
 };
 
-export { pageLoad };
+//add event listeners to each navItem
+const pageSelect = () => {
+  const navItems = document.querySelectorAll("#navBar");
+  for (let i = 0; i < navItems.length; i++) {
+    navItems[i].addEventListener("click", (event) => {
+      if (event.target.id == "homeNav") {
+        console.log("home");
+      } else if (event.target.id == "menuNav") {
+        console.log("menu");
+      } else if (event.target.id == "contactNav") {
+        console.log("contact");
+      }
+    });
+  }
+};
+
+export { pageLoad, pageSelect };

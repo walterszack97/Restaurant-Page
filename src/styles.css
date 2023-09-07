@@ -138,6 +138,15 @@ p {
     "burgers drinks";
 }
 
+@media only screen and (max-width: 800px) {
+  #menuContent {
+    display: flex;
+    flex-direction: column;
+  }
+  .foodArea {
+  }
+}
+
 .foodArea {
   grid-area: burgers;
   display: flex;
@@ -146,7 +155,6 @@ p {
   flex-direction: column;
   text-align: center;
   gap: 30px;
-  white-space: nowrap;
 }
 
 #burgerArea {

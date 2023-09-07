@@ -19,13 +19,6 @@ const renderHomepage = () => {
   familyImg.src = familyImage;
   about.appendChild(familyImg);
 
-  const mainInfo = document.createElement("p");
-  mainInfo.setAttribute("id", "mainInfo");
-  mainInfo.setAttribute("class", "info");
-  mainInfo.innerText =
-    "Though their menu is reflective of the restaurant's simple nature, the food is without frills and gimmicks, nor cheap shortcuts in quality. Rather than use pre-ground meat as the basis for his burgers, Bob instead uses choice cuts of beef in his mainstay's consistency.";
-  homeContainers.appendChild(mainInfo);
-
   const aboutInfo = document.createElement("div");
   aboutInfo.setAttribute("class", "homeContainers frame");
   aboutInfo.setAttribute("id", "aboutInfo");

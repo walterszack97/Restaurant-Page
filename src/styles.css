@@ -15,11 +15,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  min-height: 100%;
+  height: 100%;
 }
 
 #content {
-  justify-self: center;
   background-color: rgb(228, 248, 255);
   border: 5px solid rgb(255, 55, 55);
   min-height: 100%;
@@ -59,6 +58,10 @@ body {
 }
 #mainInfo {
   text-align: center;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
 }
 #family_pic {
   width: clamp(15rem, calc(1rem + 13vw), 30rem);
@@ -78,12 +81,21 @@ p {
 .header {
   justify-self: flex-start;
   font-size: clamp(2rem, calc(1rem + 2vw), 2.5rem);
+  font-family: bobsBold;
+}
+.frame > .info {
+  font-family: bobsLight;
+  font-size: clamp(2rem, calc(1rem + 2vw), 3.4rem);
 }
 #navBar {
   display: flex;
   justify-content: space-evenly;
   font-size: clamp(2rem, calc(1rem + 2vw), 3.4rem);
   width: calc(10rem + 40vw);
+  cursor: pointer;
+}
+#navBar > p:hover {
+  font-size: 1.2em;
 }
 
 #homeContent {
@@ -111,6 +123,61 @@ p {
   letter-spacing: clamp(0px, calc(3px + 0.3vw), 40px);
 }
 
+#menuContent {
+  display: grid;
+  justify-self: center;
+
+  max-width: 900px;
+  gap: 40px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "burgers sides"
+    "burgers sides"
+    "burgers sides"
+    "burgers drinks";
+}
+
+.foodArea {
+  grid-area: burgers;
+  display: flex;
+  padding: 40px;
+  gap: 30px;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+  white-space: nowrap;
+}
+
+#burgerArea {
+  grid-area: burgers;
+}
+#sidesArea {
+  grid-area: sides;
+}
+#drinksArea {
+  grid-area: drinks;
+}
+
+.foodHeader {
+  font-size: 2.5em;
+  font-family: "bobsLight";
+  font-size: clamp(2rem, calc(1rem + 2vw), 3.4rem);
+}
+.foodFooter {
+  font-family: "bobsBold";
+  font-size: clamp(1rem, calc(1rem + 1vw), 3.4rem);
+}
+#foodTitle {
+  font-family: "bobsBold";
+  margin-bottom: 10px;
+  font-size: clamp(2.5rem, calc(2.5rem + 2vw), 3.4rem);
+  color: red;
+}
+
+#contactContent {
+  font-size: clamp(2.5rem, calc(2.5rem + 2vw), 3.4rem);
+}
 /* 
   .large-font {
     font-size: clamp(1rem, 5vw, 3rem);

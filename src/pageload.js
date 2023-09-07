@@ -1,3 +1,7 @@
+import { renderHomepage } from "./homepage";
+import { renderMenuPage } from "./menupage";
+import { renderContactPage } from "./contactpage";
+
 const pageLoad = () => {
   console.log("pageload working");
 
@@ -55,12 +59,34 @@ const pageSelect = () => {
     navItems[i].addEventListener("click", (event) => {
       if (event.target.id == "homeNav") {
         console.log("home");
+        pageClear();
+        renderHomepage();
       } else if (event.target.id == "menuNav") {
         console.log("menu");
+        pageClear();
+        renderMenuPage();
       } else if (event.target.id == "contactNav") {
+        pageClear();
+        renderContactPage();
         console.log("contact");
       }
     });
+  }
+};
+
+//function to clear screen when changing
+const pageClear = () => {
+  const homeContainer = document.querySelector("#homeContent");
+  const menuContainer = document.querySelector("#menuContent");
+  const contactContainer = document.querySelector("#contactContent");
+  if (homeContainer) {
+    homeContainer.remove();
+  }
+  if (menuContainer) {
+    menuContainer.remove();
+  }
+  if (contactContainer) {
+    contactContainer.remove();
   }
 };
 
